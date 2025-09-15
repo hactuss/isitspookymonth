@@ -1,4 +1,5 @@
 <script lang="ts">
+    let fkingerror = " >> Spookymonth by SrPelo << ";
     let yesorno = "no";
     let display = "none";
     let date = new Date();
@@ -29,5 +30,15 @@
             src="https://media1.tenor.com/m/MUKNVPLzWsQAAAAd/itisaspookymonth.gif"
             alt=""
         />
+    </div>
+    <div style="margin-top: 25vh;">
+        <p>made by <a href="https://hactuss-website.vercel.app">hactuss</a></p>
+        <p>
+            watch <a
+                href="https://www.youtube.com/playlist?list=PLlgnRq26EmwJ-sDDKtiaVj-fuIGwrzCYG"
+            >
+                {fkingerror}
+            </a> here
+        </p>
     </div>
 </main>
