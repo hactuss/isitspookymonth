@@ -7,6 +7,7 @@
 
 <svelte:head>
     <link rel="icon" href={favicon} />
+    <title>Is it spooky month?</title>
 </svelte:head>
 
 {@render children?.()}
