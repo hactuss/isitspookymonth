@@ -6,7 +6,7 @@
 <main>
     <h3>
         Welcome at isitspookymonthdotcom | made by <a
-            href="https://hactuss-website.vercel.app">hactuss</a
+            href="https://haj-links.vercel.app">hactuss</a
         >
         | for my friend | watch
         <a
@@ -16,26 +16,25 @@
         </a> here
     </h3>
     <h1>Is it spookymonth?</h1>
+
     {#if d.getMonth() == 9}
         <p>yes</p>
-    {:else}
-        <p>no</p>
-    {/if}
-    {#if d.getMonth() == 9}
         <div>
             <h1>Happy Spooky Month</h1>
-            <img
-                src="https://media.tenor.com/agWRnwIHk0MAAAAj/%D0%B6%D1%83%D1%82%D0%BA%D0%B8%D0%B9%D0%BC%D0%B5%D1%81%D1%8F%D1%86-%D1%81%D0%BA%D0%B8%D0%B4%D0%B8%D0%BF%D0%B0%D0%BC%D0%BF.gif"
-                alt=""
-            />
-            <img
-                src="https://media1.tenor.com/m/HrVavLTmWewAAAAd/spooky-month-spooky-dance.gif"
-                alt=""
-            />
-            <img
-                src="https://media1.tenor.com/m/MUKNVPLzWsQAAAAd/itisaspookymonth.gif"
-                alt=""
-            />
+            <div>
+                <img
+                    src="https://media.tenor.com/agWRnwIHk0MAAAAj/%D0%B6%D1%83%D1%82%D0%BA%D0%B8%D0%B9%D0%BC%D0%B5%D1%81%D1%8F%D1%86-%D1%81%D0%BA%D0%B8%D0%B4%D0%B8%D0%BF%D0%B0%D0%BC%D0%BF.gif"
+                    alt=""
+                />
+                <img
+                    src="https://media1.tenor.com/m/HrVavLTmWewAAAAd/spooky-month-spooky-dance.gif"
+                    alt=""
+                />
+                <img
+                    src="https://media1.tenor.com/m/MUKNVPLzWsQAAAAd/itisaspookymonth.gif"
+                    alt=""
+                />
+            </div>
             <iframe
                 width="560"
                 height="315"
@@ -47,5 +46,19 @@
                 allowfullscreen
             ></iframe>
         </div>
+    {:else}
+        <p>no</p>
     {/if}
 </main>
+
+<style>
+    h3 {
+        border: 1px solid orange;
+    }
+    img {
+        width: 300px;
+    }
+    a {
+        text-decoration: underline;
+    }
+</style>
