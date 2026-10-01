@@ -8,6 +8,7 @@
     <link rel="icon" href={favicon} />
     {#if new Date().getMonth() == 9}
         <meta title="IT IS DA SPOOKY MONTH!!!" />
+        <!--
         <meta
             property="og:image"
             content="https://c.tenor.com/HrVavLTmWewAAAAd/tenor.gif"
@@ -21,10 +22,8 @@
             content="https://c.tenor.com/HrVavLTmWewAAAAd/tenor.gif"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="image"
-            content="https://c.tenor.com/HrVavLTmWewAAAAd/tenor.gif"
-        />
+        -->
+        <meta name="image" content="spooky.gif" />
     {:else}
         <title>Is it spooky month?</title>
     {/if}
