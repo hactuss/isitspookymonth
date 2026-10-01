@@ -21,6 +21,10 @@
             content="https://c.tenor.com/HrVavLTmWewAAAAd/tenor.gif"
         />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="image"
+            content="https://c.tenor.com/HrVavLTmWewAAAAd/tenor.gif"
+        />
     {:else}
         <title>Is it spooky month?</title>
     {/if}
