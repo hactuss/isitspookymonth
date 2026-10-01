@@ -7,32 +7,19 @@
 <svelte:head>
     <link rel="icon" href={favicon} />
     {#if new Date().getMonth() == 9}
-        <MetaTags
-            title="IT IS DA SPOOKY MONTH!!!"
-            description=""
-            canonical="https://isitspookymonth.vercel.app"
-            openGraph={{
-                type: "website",
-                url: "https://isitspookymonth.vercel.app",
-                images: [
-                    {
-                        url: "https://tenor.com/de/view/spooky-month-spooky-dance-gif-2212774558457813484",
-                        alt: "spookykids",
-                        width: 254,
-                        height: 240,
-                        type: "image/gif",
-                    },
-                ],
-            }}
-        />
+        <meta title="IT IS DA SPOOKY MONTH!!!" />
         <meta
             property="og:image"
-            content="https://tenor.com/de/view/spooky-month-spooky-dance-gif-2212774558457813484"
+            content="https://c.tenor.com/HrVavLTmWewAAAAd/tenor.gif"
         />
+        <meta property="og:image:type" content="image/gif" />
+        <meta property="og:image:width" content="254" />
+        <meta property="og:image:height" content="240" />
     {:else}
         <title>Is it spooky month?</title>
     {/if}
     <link rel="apple-touch-icon" href={favicon} type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </svelte:head>
 
 {@render children?.()}
