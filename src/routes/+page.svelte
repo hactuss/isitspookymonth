@@ -1,6 +1,8 @@
 <script lang="ts">
+    import { SvelteDate } from "svelte/reactivity";
+
     let fkingerror = " >> Spookymonth by SrPelo << ";
-    let d = new Date();
+    let d = new SvelteDate();
 </script>
 
 <main>
@@ -52,6 +54,46 @@
 </main>
 
 <style>
+    @import "tailwindcss";
+    @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Goldman:wght@400;700&family=Reddit+Mono:wght@200..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Ultra&display=swap");
+    @font-face {
+        font-family: "Ultra";
+        src: url("./../lib/assets/Ultra/Ultra-Regular.ttf") format("opentype");
+    }
+
+    .ultra-regular {
+        font-family: "Ultra", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .archivo-black-regular {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    :global {
+        :root {
+            font-size: 1rem;
+            color: orange;
+        }
+        * {
+            margin: 0;
+        }
+        html {
+            background-color: black;
+        }
+    }
+    main {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+    }
+    h1 {
+        font-size: 3rem;
+        font-family: "Ultra";
+    }
+
     h3 {
         border: 1px solid orange;
     }

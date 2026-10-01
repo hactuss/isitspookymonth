@@ -36,6 +36,12 @@ importers:
       svelte-check:
         specifier: ^4.0.0
         version: 4.3.5(picomatch@4.0.3)(svelte@5.48.0)(typescript@5.9.3)
+      svelte-meta:
+        specifier: ^1.0.2
+        version: 1.0.2(svelte@5.48.0)
+      svelte-meta-tags:
+        specifier: ^5.0.2
+        version: 5.0.2(svelte@5.48.0)(typescript@5.9.3)
       tailwindcss:
         specifier: ^4.0.0
         version: 4.1.18
@@ -47,7 +53,7 @@ importers:
         version: 7.3.1(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)
       vitest:
         specifier: ^3.2.3
-        version: 3.2.4(@vitest/browser@3.2.4)(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)
+        version: 3.2.4(@vitest/browser@3.2.4)(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)(supports-color@8.1.1)
       vitest-browser-svelte:
         specifier: ^0.1.0
         version: 0.1.0(@vitest/browser@3.2.4)(svelte@5.48.0)(vitest@3.2.4)
@@ -1089,6 +1095,15 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
+  schema-dts-lib@1.0.0:
+    resolution: {integrity: sha512-9MEO5vpQH9JdBioUupqluzxSYxPLjhmqRUudk15adUl/ypnRsM2/M1kN3AmVJQeG7nZqcL68H8JlGqQQT6vy9A==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      typescript: '>=4.9.5'
+
+  schema-dts@2.0.0:
+    resolution: {integrity: sha512-t7NoCy3Rn5GHGx6p7s1qIYK/AeIb8ZxJNR9WUNFkwMv2CiiGZBmqqYWc2FlZVm5ZbiHMY4OvBWhj7QtyrFO2Jw==}
+
   set-cookie-parser@2.7.2:
     resolution: {integrity: sha512-oeM1lpU/UvhTxw+g3cIfxXHyJRc/uidd3yK1P242gzHds0udQBYzs3y8j4gCCW+ZJ7ad0yctld8RYO+bdurlvw==}
 
@@ -1123,6 +1138,16 @@ packages:
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: '>=5.0.0'
+
+  svelte-meta-tags@5.0.2:
+    resolution: {integrity: sha512-OkAcO7JKBzNGsRY8RE1mlVZYzuL9tS9S1zsV2PDp5cRhVJ4EN+Bu+bpNFHcMP3mBQAnpIRpsEteuBzlfiYjq1w==}
+    peerDependencies:
+      svelte: ^5.0.0
+
+  svelte-meta@1.0.2:
+    resolution: {integrity: sha512-wwc3SIN4SRd801cWDGUWfgYvQDk7OnqyWUVpGvd9ySZOth9OC7ShFVLznest3IPsAXiF75jc/jNRTb3dJyba5g==}
+    peerDependencies:
+      svelte: ^3.38.2
 
   svelte@5.48.0:
     resolution: {integrity: sha512-+NUe82VoFP1RQViZI/esojx70eazGF4u0O/9ucqZ4rPcOZD+n5EVp17uYsqwdzjUjZyTpGKunHbDziW6AIAVkQ==}
@@ -1691,7 +1716,7 @@ snapshots:
       magic-string: 0.30.21
       sirv: 3.0.2
       tinyrainbow: 2.0.0
-      vitest: 3.2.4(@vitest/browser@3.2.4)(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)
+      vitest: 3.2.4(@vitest/browser@3.2.4)(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)(supports-color@8.1.1)
       ws: 8.19.0
     optionalDependencies:
       playwright: 1.58.0
@@ -1781,9 +1806,11 @@ snapshots:
 
   cookie@0.6.0: {}
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@8.1.1):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 8.1.1
 
   deep-eql@5.0.2: {}
 
@@ -2120,6 +2147,16 @@ snapshots:
       '@parcel/watcher': 2.5.6
     optional: true
 
+  schema-dts-lib@1.0.0(typescript@5.9.3):
+    dependencies:
+      typescript: 5.9.3
+
+  schema-dts@2.0.0(typescript@5.9.3):
+    dependencies:
+      schema-dts-lib: 1.0.0(typescript@5.9.3)
+    transitivePeerDependencies:
+      - typescript
+
   set-cookie-parser@2.7.2: {}
 
   siginfo@2.0.0: {}
@@ -2155,6 +2192,17 @@ snapshots:
       typescript: 5.9.3
     transitivePeerDependencies:
       - picomatch
+
+  svelte-meta-tags@5.0.2(svelte@5.48.0)(typescript@5.9.3):
+    dependencies:
+      schema-dts: 2.0.0(typescript@5.9.3)
+      svelte: 5.48.0
+    transitivePeerDependencies:
+      - typescript
+
+  svelte-meta@1.0.2(svelte@5.48.0):
+    dependencies:
+      svelte: 5.48.0
 
   svelte@5.48.0:
     dependencies:
@@ -2207,10 +2255,10 @@ snapshots:
 
   varint@6.0.0: {}
 
-  vite-node@3.2.4(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3):
+  vite-node@3.2.4(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)(supports-color@8.1.1):
     dependencies:
       cac: 6.7.14
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@8.1.1)
       es-module-lexer: 1.7.0
       pathe: 2.0.3
       vite: 7.3.1(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)
@@ -2251,9 +2299,9 @@ snapshots:
     dependencies:
       '@vitest/browser': 3.2.4(playwright@1.58.0)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3))(vitest@3.2.4)
       svelte: 5.48.0
-      vitest: 3.2.4(@vitest/browser@3.2.4)(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)
+      vitest: 3.2.4(@vitest/browser@3.2.4)(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)(supports-color@8.1.1)
 
-  vitest@3.2.4(@vitest/browser@3.2.4)(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3):
+  vitest@3.2.4(@vitest/browser@3.2.4)(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)(supports-color@8.1.1):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/expect': 3.2.4
@@ -2264,7 +2312,7 @@ snapshots:
       '@vitest/spy': 3.2.4
       '@vitest/utils': 3.2.4
       chai: 5.3.3
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@8.1.1)
       expect-type: 1.3.0
       magic-string: 0.30.21
       pathe: 2.0.3
@@ -2276,7 +2324,7 @@ snapshots:
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
       vite: 7.3.1(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)
-      vite-node: 3.2.4(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)
+      vite-node: 3.2.4(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3)(supports-color@8.1.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@vitest/browser': 3.2.4(playwright@1.58.0)(vite@7.3.1(jiti@2.6.1)(lightningcss@1.30.2)(sass-embedded@1.97.3)(sass@1.97.3))(vitest@3.2.4)
