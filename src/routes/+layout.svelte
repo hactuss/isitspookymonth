@@ -25,6 +25,10 @@
                 ],
             }}
         />
+        <meta
+            property="og:image"
+            content="https://tenor.com/de/view/spooky-month-spooky-dance-gif-2212774558457813484"
+        />
     {:else}
         <title>Is it spooky month?</title>
     {/if}
