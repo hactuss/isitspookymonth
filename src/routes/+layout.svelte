@@ -15,6 +15,12 @@
         <meta property="og:image:type" content="image/gif" />
         <meta property="og:image:width" content="254" />
         <meta property="og:image:height" content="240" />
+
+        <meta
+            property="twitter:image:src"
+            content="https://c.tenor.com/HrVavLTmWewAAAAd/tenor.gif"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
     {:else}
         <title>Is it spooky month?</title>
     {/if}
